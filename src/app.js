@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 app.use(userRouter);
 
 app.get('/*', (req, res) => {
-    res.render('404');
+    res.sendStatus(404)
 });
 
 app.listen(port, function () {
